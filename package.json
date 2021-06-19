@@ -1,6 +1,6 @@
 {
   "name": "nk_datepicker_core",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "dependencies": {
     "@types/react": "^17.0.3",
@@ -26,7 +26,10 @@
     "typescript": "^4.2.4"
   },
   "description": "[![Test](https://github.com/nexys-system/boilerplate_snowpack_bootstrap/actions/workflows/test.yml/badge.svg)](https://github.com/nexys-system/boilerplate_snowpack_bootstrap/actions/workflows/test.yml) [![Deploy](https://github.com/nexys-system/boilerplate_snowpack_bootstrap/actions/workflows/deploy.yml/badge.svg)](https://github.com/nexys-system/boilerplate_snowpack_bootstrap/actions/workflows/deploy.yml)",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/NatalieKapitonova/nk_datepicker_core.git"
