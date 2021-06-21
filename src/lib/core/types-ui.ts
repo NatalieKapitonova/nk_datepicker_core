@@ -8,7 +8,7 @@ export interface InputProps {
   disabled?: boolean;
 }
 
-export interface Calendar {
+export interface CalendarOverlayProps {
   date?: Date | null;
   onSelectDate: (date: Date | null) => void;
   day?: number;
@@ -20,11 +20,12 @@ export interface OverlayProps {
   open: boolean;
   children: React.ReactNode;
   onClose: () => void;
+  [prop: string]: any;
 }
 
 // UI elements
 export interface UIProps {
   Input: (props: InputProps) => JSX.Element;
-  Calendar: (props: Calendar) => JSX.Element;
+  Calendar: (props: CalendarOverlayProps) => JSX.Element;
   Overlay: (props: OverlayProps) => JSX.Element;
 }
