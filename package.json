@@ -1,6 +1,6 @@
 {
   "name": "nk_datepicker_core",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "license": "MIT",
   "dependencies": {
     "@types/react": "^17.0.3",
