@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "SNOWPACK_PUBLIC_URL= snowpack dev",
-    "build": "snowpack build",
+    "build": "SNOWPACK_PUBLIC_URL=/src/lib snowpack build",
     "buildpackage": "rm -rf ./dist;tsc -p tsconfig.build.json",
     "test": "jest"
   },
