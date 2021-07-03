@@ -4,7 +4,7 @@ import { CoreProps } from "./types-core";
 
 import * as U from "../utils";
 
-const DatePicker = ({ Input, Calendar, Overlay }: UIProps) => (
+const DatePicker = ({ Input, CalendarOverlay }: UIProps) => (
   props: CoreProps
 ): JSX.Element => {
   const {
@@ -54,9 +54,12 @@ const DatePicker = ({ Input, Calendar, Overlay }: UIProps) => (
         onClick={() => setOpenOverlay(true)}
         disabled={disabled}
       />
-      <Overlay open={openOverlay} onClose={() => setOpenOverlay(false)}>
-        <Calendar date={value} onSelectDate={handleSelectDate} />
-      </Overlay>
+      <CalendarOverlay
+        open={openOverlay}
+        onClose={() => setOpenOverlay(false)}
+        date={value}
+        onSelectDate={handleSelectDate}
+      />
     </>
   );
 };

@@ -21,7 +21,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importStar(require("react"));
 const U = __importStar(require("../utils"));
-const DatePicker = ({ Input, Calendar, Overlay }) => (props) => {
+const DatePicker = ({ Input, CalendarOverlay }) => (props) => {
     const { name, onChange, outputDateFormat = "Date", pattern = "DD.MM.YYYY", disabled = false, } = props;
     const [value, setValue] = react_1.useState(props.value ? U.getDate(props.value) : null);
     const [valueFormatted, setValueFormatted] = react_1.useState(U.formatDateString(value, pattern));
@@ -49,7 +49,6 @@ const DatePicker = ({ Input, Calendar, Overlay }) => (props) => {
     /** end handlers */
     return (react_1.default.createElement(react_1.default.Fragment, null,
         react_1.default.createElement(Input, { name: name, value: valueFormatted, onChange: onChange, onClick: () => setOpenOverlay(true), disabled: disabled }),
-        react_1.default.createElement(Overlay, { open: openOverlay, onClose: () => setOpenOverlay(false) },
-            react_1.default.createElement(Calendar, { date: value, onSelectDate: handleSelectDate }))));
+        react_1.default.createElement(CalendarOverlay, { open: openOverlay, onClose: () => setOpenOverlay(false), date: value, onSelectDate: handleSelectDate })));
 };
 exports.default = DatePicker;
